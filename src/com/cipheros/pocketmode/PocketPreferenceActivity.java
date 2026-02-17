@@ -21,33 +21,27 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
+package com.cipheros.pocketmode;
 
-package io.github.maytinhdibo.pocket.receiver;
+import android.app.Fragment;
+import android.os.Bundle;
+import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity;
+import com.android.settingslib.collapsingtoolbar.R;
 
-import android.content.BroadcastReceiver;
-import android.content.Context;
-import android.content.Intent;
-import android.telephony.TelephonyManager;
-import android.util.Log;
-
-public class PhoneStateReceiver extends BroadcastReceiver {
-
-    private static final String TAG = "PocketMode";
-    public final static int IN_CALL = 1; //while ringing or calling
-    public final static int IDLE = 0;
-
-    public static int CUR_STATE = IDLE;
-
+public class PocketPreferenceActivity extends CollapsingToolbarBaseActivity {
     @Override
-    public void onReceive(final Context context, Intent intent) {
-        String state = intent.getStringExtra(TelephonyManager.EXTRA_STATE);
-        Log.d(TAG, state);
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
 
-        if (state.equals(TelephonyManager.EXTRA_STATE_RINGING)
-                || state.equals(TelephonyManager.EXTRA_STATE_OFFHOOK)) {
-            CUR_STATE = PhoneStateReceiver.IN_CALL;
-        } else if (state.equals(TelephonyManager.EXTRA_STATE_IDLE)) {
-            CUR_STATE = PhoneStateReceiver.IDLE;
+        getActionBar().setDisplayHomeAsUpEnabled(true);
+
+        Fragment fragment = getFragmentManager().findFragmentById(R.id.content_frame);
+        PocketPreferenceFragment pocketPreferenceFragment;
+        if (fragment == null) {
+            pocketPreferenceFragment = new PocketPreferenceFragment();
+            getFragmentManager().beginTransaction()
+                    .add(R.id.content_frame, pocketPreferenceFragment)
+                    .commit();
         }
     }
 }

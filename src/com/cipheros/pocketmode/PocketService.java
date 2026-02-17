@@ -22,7 +22,7 @@
  * SOFTWARE.
  */
 
-package io.github.maytinhdibo.pocket;
+package com.cipheros.pocketmode;
 
 import android.app.AlarmManager;
 import android.app.Service;
@@ -39,7 +39,7 @@ import android.os.PowerManager;
 import android.os.SystemClock;
 import android.util.Log;
 
-import io.github.maytinhdibo.pocket.receiver.PhoneStateReceiver;
+import com.cipheros.pocketmode.receiver.PhoneStateReceiver;
 
 public class PocketService extends Service {
     private static final String TAG = "PocketMode";

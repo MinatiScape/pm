@@ -22,14 +22,14 @@
  * SOFTWARE.
  */
 
-package io.github.maytinhdibo.pocket.receiver;
+package com.cipheros.pocketmode.receiver;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 
-import io.github.maytinhdibo.pocket.PocketUtils;
-import io.github.maytinhdibo.pocket.PocketPreferenceFragment;
+import com.cipheros.pocketmode.PocketUtils;
+import com.cipheros.pocketmode.PocketPreferenceFragment;
 
 public class BootCompletedReceiver extends BroadcastReceiver {
 

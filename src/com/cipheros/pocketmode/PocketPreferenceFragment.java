@@ -22,7 +22,7 @@
  * SOFTWARE.
  */
 
-package io.github.maytinhdibo.pocket;
+package com.cipheros.pocketmode;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;

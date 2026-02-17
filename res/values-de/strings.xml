@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="appname">Batterie-freundliche Tasche Modus</string>
-    <string name="pocketmode_title">Batterie-freundliche Tasche Modus</string>
-    <string name="pocketmode_short_title">Tasche Modus</string>
-    <string name="pocketmode_summary">Batterie-freundliche Tasche Modus</string>
-    <string name="pocketmode_description">Im Gegensatz zum traditionellen Taschenmodus, der den Näherungssensor und den Lichtsensor kontinuierlich überprüft, überprüft dieser Modus die Sensoren nur im Sperrbildschirm. Sie werden die Akkulaufzeit und den Tiefschlafmodus besser erhalten. Wenn Ihr Telefon den Bildschirm nach dem Verlassen der Tasche automatisch ausschaltet, liegt dies daran, dass der Sensor seinen Zustand nicht geändert hat, warten Sie keine weiteren 15 Sekunden mehr, alles funktioniert wieder.</string>
+    <string name="appname">CipherOS PocketMode</string>
+    <string name="pocketmode_title">PocketMode Extended</string>
+    <string name="pocketmode_short_title">PocketMode</string>
+    <string name="pocketmode_summary">PocketMode für Android-Geräte</string>
+    <string name="pocketmode_description">Ein intelligentes Taschenerkennungssystem, das Näherungs- und Lichtsensoren nur überwacht, wenn das Gerät gesperrt ist, wodurch die Akkulaufzeit geschont und die Tiefschlaffunktion optimiert wird. Das System verhindert versehentliches Aufwachen, während sich Ihr Gerät in der Tasche befindet.\n\nWenn der Bildschirm nach dem Entfernen Ihres Geräts aus der Tasche ausgeschaltet bleibt, warten Sie einige Sekunden, bis sich die Sensoren neu kalibriert haben.</string>
 </resources>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="appname">CipherOS PocketMode</string>
+    <string name="pocketmode_title">PocketMode Extended</string>
+    <string name="pocketmode_short_title">PocketMode</string>
+    <string name="pocketmode_summary">Android उपकरणों के लिए PocketMode</string>
+    <string name="pocketmode_description">एक बुद्धिमान पॉकेट डिटेक्शन सिस्टम जो केवल तभी proximity और light sensors की निगरानी करता है जब डिवाइस लॉक हो। यह बैटरी जीवन को संरक्षित करता है और deep sleep functionality को अनुकूलित करता है। यह सिस्टम आपके डिवाइस के जेब में होने पर आकस्मिक wake-ups को रोकता है।\n\nयदि जेब से डिवाइस निकालने के बाद स्क्रीन बंद रहती है, तो sensors के पुनः अंशांकन के लिए कुछ सेकंड प्रतीक्षा करें।</string>
+</resources>

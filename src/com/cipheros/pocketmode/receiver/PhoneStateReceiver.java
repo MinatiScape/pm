@@ -22,29 +22,32 @@
  * SOFTWARE.
  */
 
-package io.github.maytinhdibo.pocket;
+package com.cipheros.pocketmode.receiver;
 
+import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.telephony.TelephonyManager;
 import android.util.Log;
 
-public class PocketUtils {
+public class PhoneStateReceiver extends BroadcastReceiver {
+
     private static final String TAG = "PocketMode";
+    public final static int IN_CALL = 1; //while ringing or calling
+    public final static int IDLE = 0;
 
-    public static void startService(Context context) {
-        try {
-            context.startService(new Intent(context, PocketService.class));
-        } catch (Exception e) {
-            Log.d(TAG, e.getStackTrace().toString());
-        }
+    public static int CUR_STATE = IDLE;
 
-    }
+    @Override
+    public void onReceive(final Context context, Intent intent) {
+        String state = intent.getStringExtra(TelephonyManager.EXTRA_STATE);
+        Log.d(TAG, state);
 
-    public static void stopService(Context context) {
-        try {
-            context.stopService(new Intent(context, PocketService.class));
-        } catch (Exception e) {
-            Log.d(TAG, e.getStackTrace().toString());
+        if (state.equals(TelephonyManager.EXTRA_STATE_RINGING)
+                || state.equals(TelephonyManager.EXTRA_STATE_OFFHOOK)) {
+            CUR_STATE = PhoneStateReceiver.IN_CALL;
+        } else if (state.equals(TelephonyManager.EXTRA_STATE_IDLE)) {
+            CUR_STATE = PhoneStateReceiver.IDLE;
         }
     }
 }

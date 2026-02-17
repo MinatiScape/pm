@@ -21,27 +21,30 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-package io.github.maytinhdibo.pocket;
 
-import android.app.Fragment;
-import android.os.Bundle;
-import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity;
-import com.android.settingslib.collapsingtoolbar.R;
+package com.cipheros.pocketmode;
 
-public class PocketPreferenceActivity extends CollapsingToolbarBaseActivity {
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+import android.content.Context;
+import android.content.Intent;
+import android.util.Log;
 
-        getActionBar().setDisplayHomeAsUpEnabled(true);
+public class PocketUtils {
+    private static final String TAG = "PocketMode";
 
-        Fragment fragment = getFragmentManager().findFragmentById(R.id.content_frame);
-        PocketPreferenceFragment pocketPreferenceFragment;
-        if (fragment == null) {
-            pocketPreferenceFragment = new PocketPreferenceFragment();
-            getFragmentManager().beginTransaction()
-                    .add(R.id.content_frame, pocketPreferenceFragment)
-                    .commit();
+    public static void startService(Context context) {
+        try {
+            context.startService(new Intent(context, PocketService.class));
+        } catch (Exception e) {
+            Log.d(TAG, e.getStackTrace().toString());
+        }
+
+    }
+
+    public static void stopService(Context context) {
+        try {
+            context.stopService(new Intent(context, PocketService.class));
+        } catch (Exception e) {
+            Log.d(TAG, e.getStackTrace().toString());
         }
     }
 }

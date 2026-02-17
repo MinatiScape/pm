@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="appname">Modo bolsillo amigable con la batería</string>
-    <string name="pocketmode_title">Modo bolsillo amigable con la batería</string>
-    <string name="pocketmode_short_title">Modo bolsillo</string>
-    <string name="pocketmode_summary">Modo bolsillo amigable con la batería</string>
-    <string name="pocketmode_description">A diferencia del modo de bolsillo tradicional que verifica constantemente los sensores de proximidad y de luz, este modo solo los verifica cuando el teléfono está en la pantalla de bloqueo. Por lo tanto, la duración de la batería se extenderá y el modo de suspensión profunda se optimizará.\nEn caso de que la pantalla se apague automáticamente después de sacarla del bolsillo, espere unos segundos y todo volverá a funcionar.</string>
+    <string name="appname">CipherOS PocketMode</string>
+    <string name="pocketmode_title">PocketMode Extended</string>
+    <string name="pocketmode_short_title">PocketMode</string>
+    <string name="pocketmode_summary">PocketMode para dispositivos Android</string>
+    <string name="pocketmode_description">Un sistema inteligente de detección de bolsillo que monitorea los sensores de proximidad y luz solo cuando el dispositivo está bloqueado, preservando la vida útil de la batería y optimizando la funcionalidad de suspensión profunda. El sistema evita activaciones accidentales mientras su dispositivo está en el bolsillo.\n\nSi la pantalla permanece apagada después de sacar el dispositivo del bolsillo, espere unos segundos para que los sensores se recalibren.</string>
 </resources>
