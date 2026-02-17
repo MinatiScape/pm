@@ -29,6 +29,7 @@
     android:sharedUserId="android.uid.system"
     android:versionCode="1"
     android:versionName="1.0"
+    android:theme="@style/Theme.SubSettingsBase.Expressive"
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
@@ -74,8 +75,7 @@
         <!-- use theme as setting remove android:theme if not need it -->
         <activity
             android:name=".PocketPreferenceActivity"
-            android:label="@string/pocketmode_short_title"
-            android:theme="@style/Theme.SubSettingsBase">
+            android:label="@string/pocketmode_short_title">
             <intent-filter>
                 <action android:name="com.android.settings.action.IA_SETTINGS" />
             </intent-filter>
